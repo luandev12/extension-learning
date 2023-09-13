@@ -14,7 +14,7 @@ export default (input) => {
   const orderSubtotal = parseFloat(input.cart.cost.subtotalAmount.amount);
   const errors: Error[] = [];
 
-  if (orderSubtotal > 1) {
+  if (orderSubtotal > 100000) {
     if (input.cart.buyerIdentity && input.cart.buyerIdentity.customer) {
       if (input.cart.buyerIdentity.customer.numberOfOrders < 5) {
         errors.push(error);

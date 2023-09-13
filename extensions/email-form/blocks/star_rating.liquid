@@ -1,0 +1,32 @@
+<form action="#" method="post" class="email-collection-form">
+  <label for="email">{{ block.settings.file_title }}:</label>
+  <input type="email" name="email" id="email" required>
+  <div>{{ block.settings.file_description }}</div>
+  <button type="submit" class="btn">Submit</button>
+</form>
+
+{% schema %}
+{
+  "name": "Email",
+  "target": "section",
+  "stylesheet": "app.css",
+  "javascript": "app.js",
+  "settings": [
+     {
+      "type": "text",
+      "label": "File Title",
+      "id": "file_title",
+      "default": "Default Title",
+      "info": "Enter a title for the file."
+    },
+    {
+      "type": "textarea",
+      "label": "File Description",
+      "id": "file_description",
+      "default": "Default Description",
+      "info": "Enter a description for the file."
+    }
+  ]
+}
+{% endschema %}
+
