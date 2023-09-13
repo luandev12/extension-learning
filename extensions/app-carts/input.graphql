@@ -1,0 +1,20 @@
+query Input {
+  cart {
+    buyerIdentity {
+      customer {
+        numberOfOrders
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+  }
+
+  localization {
+    country {
+      isoCode
+    }
+  }
+}
