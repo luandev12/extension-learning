@@ -1,0 +1,17 @@
+query Input {
+  cart {
+    buyerIdentity {
+      customer {
+        numberOfOrders
+        metafield(namespace: "totalOrder", key: "totalOrder"){
+          value
+        }
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+  }
+}
