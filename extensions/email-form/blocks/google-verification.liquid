@@ -1,0 +1,17 @@
+{%- if block.settings.google_verification_id != blank %}
+<meta name="google-site-verification" content="{{ block.settings.google_verification_id }}">
+{%- endif %}
+
+{% schema %}
+{
+  "name": "Google Verification",
+  "target": "head",
+  "settings": [
+    {
+      "type": "text",
+      "id": "google_verification_id",
+      "label": "Google verification ID"
+    }
+  ]
+}
+{% endschema %}
