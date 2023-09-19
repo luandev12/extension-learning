@@ -2,7 +2,7 @@
 
 name = "alertrend"
 client_id = "a792cfcc591379eadf6c056701a44bed"
-application_url = "https://microsoft-mardi-nano-compute.trycloudflare.com"
+application_url = "https://protest-pottery-swap-founded.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,7 +11,7 @@ use_legacy_install_flow = true
 
 [auth]
 redirect_urls = [
-  "https://shaw-prescription-download-reliability.trycloudflare.com/shopify/callback"
+  "https://endangered-gasoline-total-destroy.trycloudflare.com/shopify/callback"
 ]
 
 [webhooks]

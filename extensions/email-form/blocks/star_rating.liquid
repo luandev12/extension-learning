@@ -1,9 +1,24 @@
-<form action="#" method="post" class="email-collection-form">
-  <label for="email">{{ block.settings.file_title }}:</label>
-  <input type="email" name="email" id="email" required>
-  <div>{{ block.settings.file_description }}</div>
-  <button type="submit" class="btn">Submit</button>
-</form>
+<span>
+  {% if block.settings.display_form != true %} 
+    <form action="#" method="post" class="email-collection-form mb-5">
+      <div class="row my-3">
+        <div class="col-6">
+          <label for="email">Firstname</label>
+          <input placeholder={{ block.settings.first_name }} class="form-control" type="text" name="first_name" id="first_name" required>
+        </div>
+        <div class="col-6">
+          <label for="email">Lastname:</label>
+          <input placeholder={{ block.settings.last_name }} class="form-control" type="text" name="last_name" id="last_name" required>
+        </div>
+      </div>
+      <label for="email">{{ block.settings.file_title }}:</label>
+      <input class="form-control" type="email" name="email" id="email" required>
+      <button class="btn btn-primary" type="submit" class="btn text-center my-3">{{ block.settings.file_description }}</button>
+    </form>
+  {% elsif block.settings.display_form %}
+  	<span></span>
+  {% endif %}
+</span>
 
 {% schema %}
 {
@@ -25,6 +40,27 @@
       "id": "file_description",
       "default": "Default Description",
       "info": "Enter a description for the file."
+    },
+    {
+      "type": "text",
+      "label": "Firstname Email",
+      "id": "first_name",
+      "default": "First name",
+      "info": "Enter a first name"
+    },
+    {
+      "type": "text",
+      "label": "Lastname Email",
+      "id": "last_name",
+      "default": "Last name",
+      "info": "Enter a last name."
+    },
+    {
+      "type": "checkbox",
+      "label": "Check To Show/Hidden Form",
+      "id": "display_form",
+      "default": false ,
+      "info": "Display form."
     }
   ]
 }

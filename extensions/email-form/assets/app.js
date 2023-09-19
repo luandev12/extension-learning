@@ -7,10 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Get the email input value
       const emailInput = document.querySelector('#email');
+      const firstNameInput = document.querySelector('#first_name');
+      const lastNameInput = document.querySelector('#last_name');
+
       const emailValue = emailInput.value;
+      const firstNameValue = firstNameInput.value;
+      const lastNameValue = lastNameInput.value;
 
       // Log the email value to the console
-      console.log('Email submitted:', emailValue);
+      console.log(
+        'Email submitted:',
+        emailValue,
+        firstNameValue,
+        lastNameValue
+      );
 
       // You can now send this data to your app's server or perform other actions as needed
     });
