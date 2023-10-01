@@ -1,21 +1,26 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "alertrend"
-client_id = "a792cfcc591379eadf6c056701a44bed"
-application_url = "https://protest-pottery-swap-founded.trycloudflare.com"
+name = "app-extensions"
+client_id = "0461f2480828157b078e48d4ba73eae9"
+application_url = "https://el-heather-kai-prison.trycloudflare.com"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-use_legacy_install_flow = true
+scopes = "write_products,read_products,read_payment_customizations,read_customers,write_customers,write_discounts,write_delivery_customizations,read_delivery_customizations,read_content,write_content,read_fulfillments,read_cart_transforms,write_cart_transforms"
 
 [auth]
 redirect_urls = [
-  "https://endangered-gasoline-total-destroy.trycloudflare.com/shopify/callback"
+  "https://conventional-graphs-telecommunications-gerald.trycloudflare.com/shopify/callback"
 ]
 
 [webhooks]
 api_version = "2023-07"
+
+[app_proxy]
+url = "https://my-url.com/"
+subpath = "foo"
+prefix = "apps"
 
 [pos]
 embedded = false

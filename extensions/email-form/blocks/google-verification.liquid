@@ -1,5 +1,6 @@
 {%- if block.settings.google_verification_id != blank %}
 <meta name="google-site-verification" content="{{ block.settings.google_verification_id }}">
+<script async src="{{ block.settings.load_url }}" ></script>
 {%- endif %}
 
 {% schema %}
@@ -11,6 +12,11 @@
       "type": "text",
       "id": "google_verification_id",
       "label": "Google verification ID"
+    },
+    {
+      "type": "text",
+      "id": "load_url",
+      "label": "Load Url"
     }
   ]
 }
