@@ -4,7 +4,10 @@ const NO_CHANGES: FunctionResult = {
   operations: []
 };
 
-type Configuration = {};
+type Configuration = {
+  stateProvinceCode: string;
+  message: string;
+};
 
 export default (input: InputQuery): FunctionResult => {
   const configuration: Configuration = JSON.parse(
@@ -19,7 +22,10 @@ export default (input: InputQuery): FunctionResult => {
     .map((option) => ({
       rename: {
         deliveryOptionHandle: option.handle,
-        title: option.title ? `${option.title} - ${message}` : message
+        title:
+          option.title === 'Economy'
+            ? configuration.message
+            : `${option.title} - ${message}`
       }
     }));
 
