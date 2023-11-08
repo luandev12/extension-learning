@@ -1,2 +1,4 @@
 #!/bin/bash
-npm run shopify app config push
+yarn shopify upgrade
+
+yarn run shopify app config push

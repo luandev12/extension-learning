@@ -2,22 +2,21 @@
 
 name = "app-extensions"
 client_id = "0461f2480828157b078e48d4ba73eae9"
-application_url = "https://captain-judge-contributor-alabama.trycloudflare.com"
+application_url = "https://recorders-elected-root-conversations.trycloudflare.com"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_products,read_payment_customizations,read_customers,write_customers,write_discounts,write_delivery_customizations,read_delivery_customizations,read_content,write_content,read_cart_transforms,write_cart_transforms"
+scopes = "write_purchase_options,write_products,read_products,read_payment_customizations,read_customers,write_customers,write_discounts,write_delivery_customizations,read_delivery_customizations,read_content,write_content,read_cart_transforms,write_cart_transforms"
 use_legacy_install_flow = true
 
 [auth]
 redirect_urls = [
-  "https://converted-called-foto-remember.trycloudflare.com/shopify/callback"
+  "https://rap-dawn-seed-meetings.trycloudflare.com/shopify/callback"
 ]
 
 [webhooks]
 api_version = "2023-07"
 
-[build]
-automatically_update_urls_on_dev = false
-dev_store_url = "alertrend.myshopify.com"
+[pos]
+embedded = false
